@@ -10,9 +10,9 @@ public class Main {
         saab.incrementSpeed(200);
         System.out.println(saab.getCurrentSpeed());
         saab.move();
+        System.out.println(saab.getPos());
         saab.turnLeft();
         saab.move();
         System.out.println(saab.getPos());
-
     }
 }

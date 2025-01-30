@@ -3,12 +3,12 @@ import java.awt.*;
 public class Saab95 extends Car{
 
     private boolean turboOn;
-    public double currentSpeed; // The current speed of the car
 
     public Saab95(){
         super(2,125,Color.red,"Saab95");
 	    turboOn = false;
         stopEngine();
+
     }
     private void setTurboOn(){
 	    turboOn = true;
@@ -24,11 +24,10 @@ public class Saab95 extends Car{
     }
 
     public void incrementSpeed(double amount){
-        currentSpeed = getCurrentSpeed() + speedFactor() * amount;
+        setCurrentSpeed(getCurrentSpeed() + speedFactor() * amount);
     }
-
     public void decrementSpeed(double amount){
-        currentSpeed = getCurrentSpeed() - speedFactor() * amount;
+        setCurrentSpeed(getCurrentSpeed() - speedFactor() * amount);
     }
     
     // TODO fix this method according to lab pm

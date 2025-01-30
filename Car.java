@@ -22,6 +22,7 @@ public class Car implements Movable{
         this.color = color;
         this.modelName = modelName;
         this.enginePower = enginePower;
+        this.currentSpeed = 0;
         this.x = 0;
         this.y = 0;
         this.direction = Direction.North;
@@ -57,19 +58,25 @@ public class Car implements Movable{
     public String getPos() {
         return x + ", " + y;
     }
-
+    public void setCurrentSpeed(double speed) {
+        this.currentSpeed = speed;
+    }
 
     @Override
     public void move(){
         switch (direction) {
             case North:
-                y = y + currentSpeed;
+                y += currentSpeed;
+                break;
             case West:
                 x = x - currentSpeed;
+                break;
             case East:
                 x = x + currentSpeed;
+                break;
             case South:
                 y -= currentSpeed;
+                break;
         }
     }
     @Override
