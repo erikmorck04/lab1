@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Saab95 extends Car implements Movable{
+public class Saab95 extends Car{
 
     private boolean turboOn;
     public double currentSpeed; // The current speed of the car
@@ -17,7 +17,7 @@ public class Saab95 extends Car implements Movable{
 	    turboOn = false;
     }
     
-    private double speedFactor(){
+    public double speedFactor(){
         double turbo = 1;
         if(turboOn) turbo = 1.3;
         return getEnginePower() * 0.01 * turbo;

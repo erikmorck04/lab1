@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Volvo240 extends Car implements Movable{
+public class Volvo240 extends Car{
 
     private final static double trimFactor = 1.25;
     public double currentSpeed; // The current speed of the car
@@ -28,5 +28,18 @@ public class Volvo240 extends Car implements Movable{
     // TODO fix this method according to lab pm
     public void brake(double amount){
         decrementSpeed(amount);
+    }
+
+    @Override
+    public void move() {
+
+    }
+    @Override
+    public void turnLeft() {
+
+    }
+    @Override
+    public void turnRight() {
+
     }
 }
