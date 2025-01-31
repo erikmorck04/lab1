@@ -26,7 +26,6 @@ public abstract class Car implements Movable{
         this.x = 0;
         this.y = 0;
         this.direction = Direction.North;
-        stopEngine();
     }
 
     //Getter för antal dörrar
