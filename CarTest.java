@@ -1,9 +1,9 @@
 import org.junit.Test;
-import java.lang.invoke.VarHandle;
 import static org.junit.Assert.*;
 
 
 public class CarTest {
+    // Testar att engine startar och stannar
     @Test
     public void testStartAndStopEngine(){
         Saab95 car = new Saab95();
@@ -12,7 +12,7 @@ public class CarTest {
         car.stopEngine();
         assertEquals(0.0,car.getCurrentSpeed(),0);
     }
-
+    // Testar att bilarna startar åt North
     @Test
     public void testCorrectDirection() {
         Volvo240 volvo = new Volvo240();
@@ -21,6 +21,7 @@ public class CarTest {
         volvo.move();
         assertEquals("0.0, 100.0", volvo.getPos());// 0.0, 250.1
     }
+    // Checkar att speedFactor fungerar för båda
     @Test
     public void testSpeedFactorTrimAndTurbo() {
         Saab95 saab = new Saab95();
@@ -31,7 +32,7 @@ public class CarTest {
 
         assertEquals((100*0.01*1.25), volvo.speedFactor(), 0.1);
     }
-
+    // testar att öka och sänka farten med olika värden
     @Test
     public void testIncDecSpeed() {
         Saab95 saab = new Saab95();
@@ -46,6 +47,7 @@ public class CarTest {
 
         assertEquals(87.5,volvo.getCurrentSpeed(),0.1);
     }
+    // testar gas och break med olika värden
     @Test
     public void testGasBreak() {
         Car car = new Saab95();
