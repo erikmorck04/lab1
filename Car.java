@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Car implements Movable{
+public abstract class Car implements Movable{
     private int nrDoors; // Number of doors on the car
     private double enginePower; // Engine power of the car
     private double currentSpeed; // The current speed of the car
@@ -114,4 +114,43 @@ public class Car implements Movable{
         }
     }
 
+    public void incrementSpeed(double amount){
+        setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount,getEnginePower()));
+    }
+    public void decrementSpeed(double amount){
+        setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
+    }
+
+    // TODO fix this method according to lab pm
+    public void gas(double amount) {
+        if (0 <= amount && 1 >= amount) {
+            incrementSpeed(amount);
+        }
+    }
+
+
+    // TODO fix this method according to lab pm
+    public void brake(double amount) {
+        if (0 <= amount && 1 >= amount) {
+            decrementSpeed(amount);
+        }
+    }
+
 }
+
+
+
+//0
+//0.5
+//4
+//2
+//4
+//6
+//10
+//14
+//18
+
+
+
+
+
