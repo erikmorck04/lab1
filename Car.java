@@ -9,14 +9,14 @@ public abstract class Car implements Movable{
     private double x;
     private double y;
     private Direction direction;
-
+    //Enums för olika riktningar
     public enum Direction {
         North,
         East,
         South,
         West
     }
-
+    //Konstruktor
     public Car(int nrDoors, double enginePower, Color color, String modelName){
         this.nrDoors = nrDoors;
         this.color = color;
@@ -29,39 +29,44 @@ public abstract class Car implements Movable{
         stopEngine();
     }
 
-
+    //Getter för antal dörrar
     public int getNrDoors(){
         return nrDoors;
     }
+    //Getter för enginePower
     public double getEnginePower(){
         return enginePower;
     }
+    //Getter för fart
     public double getCurrentSpeed(){
         return currentSpeed;
     }
-
+    //Getter för färg
     public Color getColor(){
         return color;
     }
+    //Setter för färg
     public void setColor(Color clr){
         color = clr;
     }
-
+    //Starta bilen
     public void startEngine(){
         currentSpeed = 0.1;
     }
+    //Stanna bilen
     public void stopEngine(){
         currentSpeed = 0;
     }
 
-
+    //Getter för pos
     public String getPos() {
         return x + ", " + y;
     }
+    //Setter för speed
     public void setCurrentSpeed(double speed) {
         this.currentSpeed = speed;
     }
-
+    //Ändrar ens x och y värde med ens riktning och fart
     @Override
     public void move(){
         switch (direction) {
@@ -79,6 +84,7 @@ public abstract class Car implements Movable{
                 break;
         }
     }
+    //Ändrar riktning från en enum till en annan (tex north till west)
     @Override
     public void turnLeft(){
         switch (direction) {
@@ -96,6 +102,7 @@ public abstract class Car implements Movable{
                 break;
         }
     }
+    //Ändrar riktning från en enum till en annan (tex north till east)
     @Override
     public void turnRight(){
         switch (direction) {
@@ -113,6 +120,8 @@ public abstract class Car implements Movable{
                 break;
         }
     }
+    //En abstract metod för speedfactor
+    //Så att car inte behöver ha en egen speedfactor
     public abstract double speedFactor();
     public void incrementSpeed(double amount){
         setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount,getEnginePower()));
@@ -126,15 +135,18 @@ public abstract class Car implements Movable{
         if (0 <= amount && 1 >= amount) {
             incrementSpeed(amount);
         }
+        //Checkar ifall gamla farten inte är snabbare
         if(old_speed>currentSpeed) {
             currentSpeed = old_speed;
         }
     }
+    //Brake
     public void brake(double amount) {
         double old_speed = currentSpeed;
         if (0 <= amount && 1 >= amount) {
             decrementSpeed(amount);
         }
+        //Checkar ifall gamla farten inte är långsammare
         if(old_speed<currentSpeed) {
             currentSpeed = old_speed;
         }
