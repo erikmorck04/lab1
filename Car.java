@@ -121,21 +121,16 @@ public abstract class Car implements Movable{
         setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
     }
 
-    // TODO fix this method according to lab pm
     public void gas(double amount) {
         if (0 <= amount && 1 >= amount) {
             incrementSpeed(amount);
         }
     }
-
-
-    // TODO fix this method according to lab pm
     public void brake(double amount) {
         if (0 <= amount && 1 >= amount) {
             decrementSpeed(amount);
         }
     }
-
 }
 
 
