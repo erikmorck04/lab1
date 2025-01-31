@@ -54,6 +54,7 @@ public class CarTest {
         car.gas(1);
         car.brake(-2);
         car.brake(0);
+        assertEquals(1.35,car.getCurrentSpeed(),0.1);
     }
 // tester
 }
