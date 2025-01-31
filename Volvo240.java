@@ -9,7 +9,7 @@ public class Volvo240 extends Car{
         super(4,100,Color.black,"Volvo240");
         stopEngine();
     }
-    private double speedFactor(){
+    public double speedFactor(){
         return getEnginePower() * 0.01 * trimFactor;
     }
 
@@ -30,16 +30,4 @@ public class Volvo240 extends Car{
         decrementSpeed(amount);
     }
 
-    @Override
-    public void move() {
-
-    }
-    @Override
-    public void turnLeft() {
-
-    }
-    @Override
-    public void turnRight() {
-
-    }
 }

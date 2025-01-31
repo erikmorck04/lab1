@@ -14,5 +14,10 @@ public class Main {
         saab.turnLeft();
         saab.move();
         System.out.println(saab.getPos());
+
+        Volvo240 volvo = new Volvo240();
+        volvo.incrementSpeed(150);
+        volvo.decrementSpeed(10);
+        System.out.println(volvo.getCurrentSpeed());
     }
 }
