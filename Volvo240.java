@@ -7,7 +7,6 @@ public class Volvo240 extends Car{
     //Konstruktor
     public Volvo240(){
         super(4,100,Color.black,"Volvo240");
-        stopEngine();
     }
     //Volvo240s speedfactor funkton
     @Override
