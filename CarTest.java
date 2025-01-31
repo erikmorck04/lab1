@@ -46,5 +46,14 @@ public class CarTest {
 
         assertEquals(87.5,volvo.getCurrentSpeed(),0.1);
     }
+    @Test
+    public void testGasBreak() {
+        Car car = new Saab95();
+        car.startEngine();
+        car.gas(5);
+        car.gas(1);
+        car.brake(-2);
+        car.brake(0);
+    }
 // tester
 }
