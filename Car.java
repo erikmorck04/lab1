@@ -133,6 +133,7 @@ public abstract class Car implements Movable{
         double old_speed = currentSpeed;
         if (0 <= amount && 1 >= amount) {
             incrementSpeed(amount);
+
         }
         //Checkar ifall gamla farten inte är snabbare
         if(old_speed>currentSpeed) {

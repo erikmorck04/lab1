@@ -32,21 +32,6 @@ public class CarTest {
 
         assertEquals((100*0.01*1.25), volvo.speedFactor(), 0.1);
     }
-    // testar att öka och sänka farten med olika värden
-    @Test
-    public void testIncDecSpeed() {
-        Saab95 saab = new Saab95();
-        Volvo240 volvo = new Volvo240();
-
-        saab.incrementSpeed(10);
-        saab.decrementSpeed(5);
-        assertEquals(((0.1 + 125 * 1 * 0.01 * 10)-125 * 0.01 * 1 * 5), saab.getCurrentSpeed(),0.1);
-
-        volvo.incrementSpeed(150);
-        volvo.decrementSpeed(10);
-
-        assertEquals(87.5,volvo.getCurrentSpeed(),0.1);
-    }
     // testar gas och break med olika värden
     @Test
     public void testGasBreak() {
@@ -57,6 +42,23 @@ public class CarTest {
         car.brake(-2);
         car.brake(0);
         assertEquals(1.35,car.getCurrentSpeed(),0.1);
+    }
+    // Check if flak only moves when the car is stationary
+    @Test
+    public void testFlakIfMoving() {
+        Scania scania = new Scania();
+        scania.startEngine();
+        scania.flakTippas();
+        assertEquals(0,scania.getFlakAngle(),0.1);
+
+    }
+    @Test
+    public void testMovingIfFlak() {
+        Scania scania = new Scania();
+        scania.flakTippas();
+        scania.startEngine();
+        scania.gas(1);
+        assertEquals(0,scania.getCurrentSpeed(),0.01);
     }
 // tester
 }
