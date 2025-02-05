@@ -19,15 +19,18 @@ public class Main {
         //frame.add(carViz);
         //frame.setVisible(true);
         Volvo240 volvo = new Volvo240();
-        CarTransport carTransport = new CarTransport(100,Color.gray,"car transporter 2000",10);
+        CarTransport carTransport = new CarTransport(100,Color.gray,"car transporter 2000",10,5);
+        Saab95 saab1 = new Saab95();
+        Volvo240 volvo2402 = new Volvo240();
         volvo.startEngine();
-        volvo.gas(1);
-        volvo.gas(1);
-        volvo.gas(1);
+        volvo2402.startEngine();
+        saab1.startEngine();
 
         carTransport.startEngine();
         carTransport.gas(1);
         carTransport.loadCar(volvo);
+        carTransport.loadCar(volvo2402);
+        carTransport.loadCar(saab1);
         carTransport.gas(1);
         carTransport.unloadCar();
         carTransport.gas(1);

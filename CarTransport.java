@@ -4,16 +4,22 @@ import java.util.Stack;
 
 public class CarTransport extends Truck {
     private Stack<Car> carryList = new Stack<Car>();
-    private double flakAngle;
-
-    public CarTransport(double enginePower, Color color, String modelName,double length) {
+    private int flakAngle;
+    private int max_cars;
+    public CarTransport(double enginePower, Color color, String modelName,double length, int maxcars) {
         super(2, enginePower, color, modelName, 1,length);
+        flakAngle = 1;
+        max_cars = maxcars;
+    }
+
+    public void rampOpen() {
+        flakAngle = 0;
+    }
+
+    public void rampClose() {
         flakAngle = 1;
     }
 
-    public void flakTippas() {
-
-    }
     public void Move() {
         if (getFlakAngle() == 0) {
             super.move();
@@ -35,7 +41,7 @@ public class CarTransport extends Truck {
         return distance <= 10;
     }
     public void loadCar(Car car) {
-        if (carInRange(car) && getFlakAngle() ==0) {
+        if (carInRange(car) && getFlakAngle() ==0 && carryList.size()!=max_cars) {
             if (!carryList.contains(car) && !(car instanceof CarTransport) && car.getLength()<=6) {
                 carryList.push(car);
                 System.out.println(car.getModelName() + "har loadats");
@@ -44,13 +50,13 @@ public class CarTransport extends Truck {
         }
     }
     public void unloadCar() {
-        if (getFlakAngle() ==0) {
-                Car unloaded = carryList.getLast();
-                carryList.pop();
-                unloaded.setX(getX());
-                unloaded.setY(getY());
-                unloaded.move();
-                System.out.println("Car " + unloaded.getModelName() + " has been unloaded.");
+        if (getFlakAngle() == 0) {
+            Car unloaded = carryList.getLast();
+            carryList.pop();
+            unloaded.setX(getX());
+            unloaded.setY(getY());
+            unloaded.move();
+            System.out.println("Car " + unloaded.getModelName() + " has been unloaded.");
         }
     }
 }
