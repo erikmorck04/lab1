@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
+    <list id="f4f81824-b170-4d48-b42d-c1c0d51f346e" name="Changes by erikm" comment="">
+      <change beforePath="$PROJECT_DIR$/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.java" afterDir="false" />
+    </list>
+    <list id="0a6304b7-cd67-43c5-a024-3efe27744c89" name="Changes by Sixte" comment="">
+      <change beforePath="$PROJECT_DIR$/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +18,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/Truck.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="f4f81824-b170-4d48-b42d-c1c0d51f346e" />
+        <range start1="8" end1="8" start2="9" end2="11" changelist="0a6304b7-cd67-43c5-a024-3efe27744c89" />
+        <range start1="22" end1="27" start2="25" end2="33" changelist="0a6304b7-cd67-43c5-a024-3efe27744c89" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -26,13 +41,15 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.CarTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

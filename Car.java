@@ -9,7 +9,8 @@ public abstract class Car implements Movable{
     private double x;
     private double y;
     private Direction direction;
-
+    private boolean loadable;
+    private double length;
     protected Car() {
     }
 
@@ -21,7 +22,7 @@ public abstract class Car implements Movable{
         West
     }
     //Konstruktor
-    public Car(int nrDoors, double enginePower, Color color, String modelName){
+    public Car(int nrDoors, double enginePower, Color color, String modelName,double length){
         this.nrDoors = nrDoors;
         this.color = color;
         this.modelName = modelName;
@@ -30,6 +31,8 @@ public abstract class Car implements Movable{
         this.x = 0;
         this.y = 0;
         this.direction = Direction.North;
+        this.loadable = false;
+        this.length = length;
     }
 
     //Getter för antal dörrar
@@ -44,6 +47,8 @@ public abstract class Car implements Movable{
     public double getCurrentSpeed(){
         return currentSpeed;
     }
+
+    public String getModelName(){return modelName;}
     //Getter för färg
     public Color getColor(){
         return color;
@@ -55,6 +60,8 @@ public abstract class Car implements Movable{
     //Starta bilen
     public void startEngine(){
         currentSpeed = 0.1;
+        move();
+        System.out.println(modelName + " " + getPos());
     }
     //Stanna bilen
     public void stopEngine(){
@@ -64,6 +71,19 @@ public abstract class Car implements Movable{
     //Getter för pos
     public String getPos() {
         return x + ", " + y;
+    }
+
+    public double getX() {
+        return x;
+    }
+    public double getY() {
+        return y;
+    }
+    public void setX(double new_x){
+        x = new_x;
+    }
+    public void setY(double new_y){
+        y = new_y;
     }
     //Setter för speed
     public void setCurrentSpeed(double speed) {
@@ -126,13 +146,15 @@ public abstract class Car implements Movable{
     //En abstract metod för speedfactor
     //Så att car inte behöver ha en egen speedfactor
     public abstract double speedFactor();
-    public void incrementSpeed(double amount){
+    private void incrementSpeed(double amount){
         setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount,getEnginePower()));
     }
-    public void decrementSpeed(double amount){
+    private void decrementSpeed(double amount){
         setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
     }
-
+    public double getLength(){
+        return length;
+    }
     public void gas(double amount) {
         double old_speed = currentSpeed;
         if (0 <= amount && 1 >= amount) {
@@ -143,6 +165,8 @@ public abstract class Car implements Movable{
         if(old_speed>currentSpeed) {
             currentSpeed = old_speed;
         }
+        move();
+        System.out.println(modelName + " " + getPos());
     }
     //Brake
     public void brake(double amount) {
@@ -154,20 +178,11 @@ public abstract class Car implements Movable{
         if(old_speed<currentSpeed) {
             currentSpeed = old_speed;
         }
+        move();
     }
 }
 
 
-
-//0
-//0.5
-//4
-//2
-//4
-//6
-//10
-//14
-//18
 
 
 

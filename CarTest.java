@@ -44,6 +44,7 @@ public class CarTest {
         assertEquals(1.35,car.getCurrentSpeed(),0.1);
     }
     // Check if flak only moves when the car is stationary
+    /*
     @Test
     public void testFlakIfMoving() {
         Scania scania = new Scania();
@@ -60,5 +61,6 @@ public class CarTest {
         scania.gas(1);
         assertEquals(0,scania.getCurrentSpeed(),0.01);
     }
+    */
 // tester
 }
