@@ -9,6 +9,10 @@ public abstract class Car implements Movable{
     private double x;
     private double y;
     private Direction direction;
+
+    protected Car() {
+    }
+
     //Enums för olika riktningar
     public enum Direction {
         North,
