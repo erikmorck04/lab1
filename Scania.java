@@ -9,7 +9,7 @@ public class Scania extends Car{
         this.flakAngle = 0.0;
     }
 
-    @Override // lastbilar accelererar långsamt detta bör ändrass
+    @Override // lastbilar accelererar långsamt detta bör ändras
     public double speedFactor() {
         return getEnginePower() * 0.01;
     }
