@@ -12,34 +12,13 @@ public class Main {
         volvo2402.startEngine();
         saab1.startEngine();
         carTransport.startEngine();
-        carTransport1.startEngine();
 
+        Workshop verkstad = new Workshop(10);
+        verkstad.addType("Volvo240");
+        verkstad.acceptCar(volvo2402);
+        verkstad.print_types();
+        verkstad.prints_cars();
 
-        carTransport.gas(1);
-        carTransport.brake(1);
-        carTransport.brake(1);
-        System.out.println(carTransport.getCurrentSpeed());
-        carTransport.rampOpen(); // 1
-        carTransport.loadCar(carTransport1);
-        carTransport.loadCar(volvo);
-        carTransport.loadCar(saab1);
-        carTransport.rampClose(); //0
-        System.out.println(volvo.getPos());
-        System.out.println(carTransport.getPos());
-        carTransport.gas(1);
-        carTransport.rampOpen();
-        carTransport.brake(1);
-        carTransport.brake(1);
-        System.out.println(carTransport.getCurrentSpeed());
-        System.out.println("Flak Angle before opening: " + carTransport.getFlakAngle());
-        carTransport.unloadCar();
-        carTransport.rampOpen();
-        System.out.println("Flak Angle after opening: " + carTransport.getFlakAngle());
-        carTransport.unloadCar();
-        carTransport.unloadCar();
-        carTransport.unloadCar();
-        carTransport.gas(1);
-        System.out.println(volvo.getPos());
 
     }
 }

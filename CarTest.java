@@ -1,4 +1,7 @@
 import org.junit.Test;
+
+import java.awt.*;
+
 import static org.junit.Assert.*;
 
 
@@ -60,5 +63,51 @@ public class CarTest {
         scania.gas(1);
         assertEquals(0,scania.getCurrentSpeed(),0.01);
     }
-// tester
+    @Test
+    public void testRampOpenClose() {
+        CarTransport carTransport = new CarTransport(100, Color.red, "CarTransport2000", 10, 3);
+        carTransport.rampOpen();
+        assertEquals(1, carTransport.getFlakAngle(),0.01);
+        carTransport.rampClose();
+        assertEquals(0, carTransport.getFlakAngle(),0.01);
+        carTransport.gas(1);
+        carTransport.rampOpen();
+        assertEquals(0, carTransport.getFlakAngle(),0.01);
+    }
+    @Test
+    public void testFirstInLastOut()  {
+        CarTransport carTransport = new CarTransport(100, Color.red, "CarTransport2000", 10, 2);
+        Volvo240 volvo1 = new Volvo240();
+        Volvo240 volvo2 = new Volvo240();
+        Saab95 saab95 = new Saab95();
+        carTransport.rampOpen();
+        carTransport.loadCar(volvo1);
+        carTransport.loadCar(volvo2);
+        carTransport.loadCar(saab95);
+
+    }
+    @Test // går att loada bil, om den är för nära eller om den
+    public void testLoadable() {
+        CarTransport carTransport = new CarTransport(100, Color.red, "CarTransport2000", 10, 2);
+        Volvo240 volvo = new Volvo240();
+        carTransport.gas(1);
+        carTransport.gas(1);
+        carTransport.gas(1);
+        carTransport.gas(1);
+        carTransport.rampOpen();
+        carTransport.loadCar(volvo);
+        //assertNull(
+    }
+    @Test
+    public void testTransportPos() {
+        CarTransport carTransport = new CarTransport(100, Color.red, "CarTransport2000", 10, 2);
+        Volvo240 volvo = new Volvo240();
+        carTransport.rampOpen();
+        carTransport.loadCar(volvo);
+        carTransport.gas(1);
+        carTransport.gas(1);
+        carTransport.gas(1);
+
+    }
+// tester: att bilar unloadas på i rätt ordning,
 }

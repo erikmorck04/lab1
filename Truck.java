@@ -22,6 +22,8 @@ public abstract class Truck extends Car {
         }
     }
 
+
+
     @Override
     public void startEngine(){
         if (flakAngle == 0) {
@@ -38,6 +40,14 @@ public abstract class Truck extends Car {
 
     public double getFlakAngle() {
         return flakAngle;
+    }
+
+    public void setFlakAngle(int angle) {
+        if (angle >= 0 && angle <= maxAngle && getCurrentSpeed()==0) { // Ensure the angle is within valid range
+            flakAngle = angle;
+        } else {
+            System.out.println("Invalid flak angle or speed is not 0.");
+        }
     }
 
     public void flakTippas(int amount) { //
