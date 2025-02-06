@@ -60,7 +60,6 @@ public abstract class Car implements Movable{
     //Starta bilen
     public void startEngine(){
         currentSpeed = 0.1;
-        move();
         System.out.println(modelName + " " + getPos());
     }
     //Stanna bilen

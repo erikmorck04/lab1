@@ -17,9 +17,8 @@ public class CarTest {
     public void testCorrectDirection() {
         Volvo240 volvo = new Volvo240();
         volvo.startEngine();
-        volvo.setCurrentSpeed(100);
         volvo.move();
-        assertEquals("0.0, 100.0", volvo.getPos());// 0.0, 250.1
+        assertEquals("0.0, 0.1", volvo.getPos());// 0.0, 250.1
     }
     // Checkar att speedFactor fungerar för båda
     @Test
@@ -44,23 +43,22 @@ public class CarTest {
         assertEquals(1.35,car.getCurrentSpeed(),0.1);
     }
     // Check if flak only moves when the car is stationary
-    /*
+
     @Test
     public void testFlakIfMoving() {
         Scania scania = new Scania();
         scania.startEngine();
-        scania.flakTippas();
+        scania.flakTippas(5);
         assertEquals(0,scania.getFlakAngle(),0.1);
 
     }
     @Test
     public void testMovingIfFlak() {
         Scania scania = new Scania();
-        scania.flakTippas();
+        scania.flakTippas(5);
         scania.startEngine();
         scania.gas(1);
         assertEquals(0,scania.getCurrentSpeed(),0.01);
     }
-    */
 // tester
 }

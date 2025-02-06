@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
-    <list id="f4f81824-b170-4d48-b42d-c1c0d51f346e" name="Changes by erikm" comment="">
+    <list default="true" id="8d20adf9-c749-444f-acd2-e0c1313b357b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTransport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.java" afterDir="false" />
-    </list>
-    <list id="0a6304b7-cd67-43c5-a024-3efe27744c89" name="Changes by Sixte" comment="">
-      <change beforePath="$PROJECT_DIR$/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarTransport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Truck.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,48 +22,36 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Truck.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="7" changelist="f4f81824-b170-4d48-b42d-c1c0d51f346e" />
-        <range start1="8" end1="8" start2="9" end2="11" changelist="0a6304b7-cd67-43c5-a024-3efe27744c89" />
-        <range start1="22" end1="27" start2="25" end2="33" changelist="0a6304b7-cd67-43c5-a024-3efe27744c89" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2sWuhFf0rUQfaBNkTakpPBg19bv" />
+  <component name="ProjectId" id="2scS7RH2b0PyHMgTQBXezQtZIVx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.CarTest.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
-      <created>1738583768828</created>
+      <changelist id="8d20adf9-c749-444f-acd2-e0c1313b357b" name="Changes" comment="" />
+      <created>1738753203213</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1738583768828</updated>
+      <updated>1738753203213</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab1$Main.ic" NAME="Main Coverage Results" MODIFIED="1738770159045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
