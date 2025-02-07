@@ -9,7 +9,6 @@ public abstract class Car implements Movable{
     private double x;
     private double y;
     private Direction direction;
-    private boolean loadable;
     private double length;
     protected Car() {
     }
@@ -21,6 +20,8 @@ public abstract class Car implements Movable{
         South,
         West
     }
+
+
     //Konstruktor
     public Car(int nrDoors, double enginePower, Color color, String modelName,double length){
         this.nrDoors = nrDoors;
@@ -31,7 +32,6 @@ public abstract class Car implements Movable{
         this.x = 0;
         this.y = 0;
         this.direction = Direction.North;
-        this.loadable = false;
         this.length = length;
     }
 

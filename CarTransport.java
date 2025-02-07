@@ -10,7 +10,9 @@ public class CarTransport extends Truck {
         this.max_cars = maxcars;
 
     }
-
+    public Stack<Car> getCarryList(){
+        return carryList;
+    }
 
     public void rampOpen() {
         if (getCurrentSpeed() == 0) { // Ensure the truck is not moving
@@ -60,7 +62,7 @@ public class CarTransport extends Truck {
             if (!carryList.contains(car) && !(car instanceof CarTransport) && car.getLength() <= 6) {
                 carryList.push(car);
                 System.out.println(car.getModelName() + "har loadats");
-                System.out.println(carryList);
+                //System.out.println(carryList);
             }
         }
     }

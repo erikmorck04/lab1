@@ -13,12 +13,11 @@ public class Main {
         saab1.startEngine();
         carTransport.startEngine();
 
-        Workshop verkstad = new Workshop(10);
-        verkstad.addType("Volvo240");
-        verkstad.acceptCar(volvo2402);
-        verkstad.print_types();
-        verkstad.prints_cars();
+        Workshop<Volvo240> saabVerkstad = new Workshop<>(2);
+        saabVerkstad.acceptCar(volvo);
+        saabVerkstad.acceptCar(volvo);
+        saabVerkstad.prints_cars();
 
-
+        System.out.println(carTransport.getCarryList());
     }
 }

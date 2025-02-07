@@ -2,50 +2,41 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Workshop {
+public class Workshop<T extends Car> {
     private final int maxCars;
-    private ArrayList<Car> carList = new ArrayList<Car>();
-    private ArrayList<String> allowedTypes = new ArrayList<String>();
+    private final ArrayList<T> carList = new ArrayList<>();
+
 
     public Workshop(int maxCars) {
         this.maxCars = maxCars;
     }
 
-    public void addType(String type){
-        allowedTypes.add(type);
+    public ArrayList<T> getCarList() {
+        return carList;
     }
 
-    public void removeType(String type){
-        allowedTypes.remove(type);
-    }
-
-    public void acceptCar(Car car){
-        if(allowedTypes.contains(car.getModelName())){
-            if(carList.size() < maxCars) {
-                carList.add(car);
-                System.out.println("Vehicle has entered the workshop");
-            }
+    public void acceptCar(T car) {
+        if (carList.size() >= maxCars) {
+            System.out.println("Workshop is full");
+        } else if (carList.contains(car)){
+            System.out.println("Bil redan i verkstad");
         }
-        //else {
-        //    throw new Exception("Fel sorts bil");
-        //}
-    }
-    //Printar ut alla typer som är accepterade
-    public void print_types() {
-        for (String allowedType : allowedTypes) {
-            System.out.println(allowedType);
+        else {
+            carList.add(car);
         }
     }
     //Printar
     public void prints_cars(){
-        for (Car car : carList) {
+        for (T car : carList) {
             System.out.println(car);
         }
     }
-    public void removeCar(Car car){
+    public void removeCar(T car){
         if(carList.contains(car)){
             carList.remove(car);
             System.out.println("Vehicle has left the workshop");
+        }else{
+            System.out.println("Bil ej i verkstad");
         }
     }
 

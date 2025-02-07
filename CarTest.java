@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import java.awt.*;
+import java.util.Stack;
 
 import static org.junit.Assert.*;
 
@@ -74,18 +75,6 @@ public class CarTest {
         carTransport.rampOpen();
         assertEquals(0, carTransport.getFlakAngle(),0.01);
     }
-    @Test
-    public void testFirstInLastOut()  {
-        CarTransport carTransport = new CarTransport(100, Color.red, "CarTransport2000", 10, 2);
-        Volvo240 volvo1 = new Volvo240();
-        Volvo240 volvo2 = new Volvo240();
-        Saab95 saab95 = new Saab95();
-        carTransport.rampOpen();
-        carTransport.loadCar(volvo1);
-        carTransport.loadCar(volvo2);
-        carTransport.loadCar(saab95);
-
-    }
     @Test // går att loada bil, om den är för nära eller om den
     public void testLoadable() {
         CarTransport carTransport = new CarTransport(100, Color.red, "CarTransport2000", 10, 2);
@@ -96,7 +85,7 @@ public class CarTest {
         carTransport.gas(1);
         carTransport.rampOpen();
         carTransport.loadCar(volvo);
-        //assertNull(
+        assertEquals(Stack,carTransport.getCarryList());
     }
     @Test
     public void testTransportPos() {
@@ -107,7 +96,37 @@ public class CarTest {
         carTransport.gas(1);
         carTransport.gas(1);
         carTransport.gas(1);
-
     }
 // tester: att bilar unloadas på i rätt ordning,
+    @Test
+    public void testFirstInLastOut() {
+        CarTransport carTransport = new CarTransport(100, Color.red, "CarTransport2000", 10, 3);
+
+        Volvo240 volvo = new Volvo240();
+        Volvo240 volv = new Volvo240();
+        Saab95 saab = new Saab95();
+
+        carTransport.rampOpen();
+        carTransport.loadCar(volvo);
+        carTransport.loadCar(volv);
+
+        System.out.println(carTransport.getCarryList());
+        assertEquals(2.0, carTransport.getCarryList().size(),0.01);
+        assertEquals(volv, carTransport.getCarryList().get(1));
+        carTransport.loadCar(saab);
+        assertEquals(3.0, carTransport.getCarryList().size(),0.01);
+        carTransport.unloadCar();
+        assertEquals(volv, carTransport.getCarryList().get(1));
+        carTransport.unloadCar();
+        assertEquals(volvo, carTransport.getCarryList().get(0));
+    }
+    @Test
+    public void testWorkshop(){
+        Workshop<Saab95> workshopSaab = new Workshop<Saab95>(3);
+        Saab95 saab = new Saab95();
+        assertEquals(0.0, workshopSaab.getCarList().size(),0.01);
+        workshopSaab.acceptCar(saab);
+        assertEquals(1.0, workshopSaab.getCarList().size(),0.01);
+        workshopSaab.removeCar(s);
+    }
 }
