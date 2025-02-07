@@ -19,5 +19,9 @@ public class Main {
         saabVerkstad.prints_cars();
 
         System.out.println(carTransport.getCarryList());
+
+
+        Workshop<Car> verkstad = new Workshop<>(2);
+        //System.out.println(verksta);
     }
 }

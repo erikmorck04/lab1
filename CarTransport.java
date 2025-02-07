@@ -35,23 +35,21 @@ public class CarTransport extends Truck {
 
 
 
-    public void move() {
-        if (getFlakAngle() == 0) {
-            for (int x = 0; x < carryList.size(); x++) {
+    public void gas(double amount) {
+        super.gas(amount);
+        for (int x = 0; x < carryList.size(); x++) {
                 //Finns garanterat ett bättre sätt att göra det här på
                 //Hämtar ett objekt, ändrar xy och sen skickar tillbaka den
-                Car current = carryList.get(x);
-                current.setY(getY());
-                current.setX(getX());
-                carryList.set(x, current);
+            Car current = carryList.get(x);
+            current.setY(getY());
+            current.setX(getX());
+            carryList.set(x, current);
                 //Uppdatera alla bilar inuti så att deras position är rätt
-            }
-            super.move();
         }
     }
 
-    public boolean carInRange(Car car) {
-        double xDistance = Math.abs(this.getX() - car.getX()); // ex(10,25) och (30,10) blir 20,15
+    public boolean carInRange(Car car) { // phytagoras för att räkna ut distans från CarTransport til car
+        double xDistance = Math.abs(this.getX() - car.getX());
         double yDistance = Math.abs(this.getY() - car.getY());
         double distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
         return distance <= 10;
@@ -62,7 +60,6 @@ public class CarTransport extends Truck {
             if (!carryList.contains(car) && !(car instanceof CarTransport) && car.getLength() <= 6) {
                 carryList.push(car);
                 System.out.println(car.getModelName() + "har loadats");
-                //System.out.println(carryList);
             }
         }
     }
@@ -73,10 +70,7 @@ public class CarTransport extends Truck {
             carryList.pop();
             unloaded.setX(getX());
             unloaded.setY(getY());
-            //unloaded.move();
             System.out.println(unloaded.getModelName() + " unloaded");
-
-
         }
     }
 }

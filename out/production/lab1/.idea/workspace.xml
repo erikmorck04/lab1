@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Workshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop.java" afterDir="false" />
+    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
+    <list id="18cee802-c486-4328-bc87-11567376e368" name="Changes by erikm" comment="">
+      <change beforePath="$PROJECT_DIR$/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
     </list>
-    <list id="18cee802-c486-4328-bc87-11567376e368" name="Changes by erikm" comment="" />
-    <list id="3118b501-ec39-49dd-8db2-c45f5185aa3d" name="Changes by Sixte" comment="" />
+    <list id="3118b501-ec39-49dd-8db2-c45f5185aa3d" name="Changes by Sixte" comment="">
+      <change beforePath="$PROJECT_DIR$/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/CarTest.java">
+      <ranges>
+        <range start1="87" end1="87" start2="87" end2="88" changelist="18cee802-c486-4328-bc87-11567376e368" />
+        <range start1="129" end1="130" start2="130" end2="132" changelist="3118b501-ec39-49dd-8db2-c45f5185aa3d" />
+      </ranges>
+    </file>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -41,6 +51,8 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
     &quot;JUnit.CarTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testLoadable.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testUnloadOrder.executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
@@ -51,6 +63,34 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RunManager" selected="JUnit.CarTest.testLoadable">
+    <configuration name="CarTest.testLoadable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CarTest" />
+      <option name="METHOD_NAME" value="testLoadable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarTest.testUnloadOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CarTest" />
+      <option name="METHOD_NAME" value="testUnloadOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CarTest.testLoadable" />
+        <item itemvalue="JUnit.CarTest.testUnloadOrder" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

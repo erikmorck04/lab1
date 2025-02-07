@@ -6,16 +6,16 @@ public abstract class Truck extends Car {
     private int maxAngle;
     public Truck(int nrDoors, double enginePower, Color color, String modelName, int max_angle,double length){
         super(nrDoors,enginePower,color,modelName,length);
-        maxAngle = max_angle;
+        this.maxAngle = max_angle;
     }
 
-    @Override
+    @Override //Gas-metod som tar hänsyn till om flaket är öppet
     public void gas(double amount) {
-        if (getFlakAngle() == 0) {
+        if (flakAngle == 0) {
             super.gas(amount);
         }
     }
-    @Override
+    @Override //Brake-metod som tar hänsyn till om flaket är öppet
     public void brake(double amount) {
         if (flakAngle == 0) {
             super.brake(amount);
