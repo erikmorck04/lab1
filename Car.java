@@ -78,10 +78,10 @@ public abstract class Car implements Movable{
     public double getY() {
         return y;
     }
-    public void setX(double new_x){
+    void setX(double new_x){
         x = new_x;
     }
-    public void setY(double new_y){
+    void setY(double new_y){
         y = new_y;
     }
     //Setter för speed

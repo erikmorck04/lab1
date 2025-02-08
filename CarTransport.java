@@ -15,7 +15,7 @@ public class CarTransport extends Truck {
     }
 
     public void rampOpen() {
-        if (getCurrentSpeed() == 0) { // Ensure the truck is not moving
+        if (getCurrentSpeed() <= 0.001) { // Ensure the truck is not moving
             setFlakAngle(1);
             System.out.println("Ramp opened.");
         } else {
@@ -25,7 +25,7 @@ public class CarTransport extends Truck {
 
     // Close the ramp (set flakAngle to 0)
     public void rampClose() {
-        if (getCurrentSpeed() == 0) { // Ensure the truck is not moving
+        if (getCurrentSpeed() <= 0.001) { // Ensure the truck is not moving
             setFlakAngle(0);
             System.out.println("Ramp closed.");
         } else {
