@@ -40,9 +40,13 @@ public class CarTest {
         Vehicle car = new Saab95();
         car.startEngine();
         car.gas(5);
+        car.move();
         car.gas(1);
+        car.move();
         car.brake(-2);
+        car.move();
         car.brake(0);
+        car.move();
         assertEquals(1.35,car.getCurrentSpeed(),0.1);
     }
     // Check if flak only moves when the car is stationary
@@ -80,9 +84,11 @@ public class CarTest {
         Volvo240 volvo = new Volvo240();
         while (carTransport.getCurrentSpeed() < 4) {
             carTransport.gas(1);
+            carTransport.move();
         }
         while (carTransport.getCurrentSpeed() > 0) {
             carTransport.brake(1);
+            carTransport.move();
         }
         carTransport.rampOpen();
         carTransport.loadCar(volvo);
@@ -97,6 +103,7 @@ public class CarTest {
         carTransport.loadCar(volvo);
         carTransport.rampClose();
         carTransport.gas(1);
+        carTransport.move();
         assertEquals(carTransport.getPos(),volvo.getPos());
     }
 // tester: att bilar unloadas på i rätt ordning,

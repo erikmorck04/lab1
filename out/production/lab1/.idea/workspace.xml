@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarTransport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Vehicle.class" afterDir="false" />
+    </list>
+    <list id="5b2a66d8-ab09-48a3-b814-11f38977f34f" name="Changes by Sixte" comment="">
       <change beforePath="$PROJECT_DIR$/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTransport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Workshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +33,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/CarTest.java">
+      <ranges>
+        <range start1="42" end1="42" start2="42" end2="43" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
+        <range start1="43" end1="43" start2="44" end2="45" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
+        <range start1="44" end1="44" start2="46" end2="47" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
+        <range start1="45" end1="45" start2="48" end2="49" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
+        <range start1="82" end1="82" start2="86" end2="87" changelist="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" />
+        <range start1="85" end1="85" start2="90" end2="91" changelist="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" />
+        <range start1="99" end1="99" start2="105" end2="106" changelist="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -41,25 +58,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.CarTest.executor": "Run",
-    "JUnit.CarTest.testLoadable.executor": "Run",
-    "JUnit.CarTest.testTransportPos.executor": "Run",
-    "JUnit.CarTest.testUnloadOrder.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CarController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JUnit.CarTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testLoadable.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testTransportPos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testUnloadOrder.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.CarTest.testLoadable">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pics" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CarController">
+    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CarController" />
+      <module name="lab1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CarTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CarTest.testLoadable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <option name="PACKAGE_NAME" value="" />
@@ -92,7 +131,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CarController" />
         <item itemvalue="JUnit.CarTest.testLoadable" />
+        <item itemvalue="JUnit.CarTest" />
         <item itemvalue="JUnit.CarTest.testTransportPos" />
         <item itemvalue="JUnit.CarTest.testUnloadOrder" />
       </list>
@@ -110,7 +151,7 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab1$CarTest_testLoadable.ic" NAME="CarTest.testLoadable Coverage Results" MODIFIED="1738939467920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1$CarTest_testLoadable.ic" NAME="CarTest.testLoadable Coverage Results" MODIFIED="1740054786421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/lab1$CarTest.ic" NAME="CarTest Coverage Results" MODIFIED="1738939486964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

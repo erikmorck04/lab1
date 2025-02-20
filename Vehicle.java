@@ -164,7 +164,6 @@ public abstract class Vehicle implements Movable{
         if(old_speed>currentSpeed) {
             currentSpeed = old_speed;
         }
-        move();
         System.out.println(modelName + " " + getPos());
     }
     //Brake
@@ -177,7 +176,6 @@ public abstract class Vehicle implements Movable{
         if(old_speed<currentSpeed) {
             currentSpeed = old_speed;
         }
-        move();
     }
 }
 

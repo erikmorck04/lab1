@@ -34,16 +34,17 @@ public class CarTransport extends Truck {
 
 
 
-    public void gas(double amount) {
-        super.gas(amount);
+    @Override
+    public void move(){
+        super.move();
         for (int x = 0; x < carryList.size(); x++) {
-                //Finns garanterat ett bättre sätt att göra det här på
-                //Hämtar ett objekt, ändrar xy och sen skickar tillbaka den
+            //Finns garanterat ett bättre sätt att göra det här på
+            //Hämtar ett objekt, ändrar xy och sen skickar tillbaka den
             Vehicle current = carryList.get(x);
             current.setY(getY());
             current.setX(getX());
             carryList.set(x, current);
-                //Uppdatera alla bilar inuti så att deras position är rätt
+            //Uppdatera alla bilar inuti så att deras position är rätt
         }
     }
 
