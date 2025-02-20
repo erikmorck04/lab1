@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public abstract class Truck extends Car {
+public abstract class Truck extends Vehicle {
 
     private int flakAngle;
     private int maxAngle;

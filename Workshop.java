@@ -1,8 +1,6 @@
-import java.lang.reflect.Type;
-import java.util.List;
 import java.util.ArrayList;
 
-public class Workshop<T extends Car> {
+public class Workshop<T extends Vehicle> {
     private final int maxCars;
     private final ArrayList<T> carList = new ArrayList<>();
 

@@ -21,7 +21,7 @@ public class Main {
         System.out.println(carTransport.getCarryList());
 
 
-        Workshop<Car> verkstad = new Workshop<>(2);
+        Workshop<Vehicle> verkstad = new Workshop<>(2);
         //System.out.println(verksta);
     }
 }

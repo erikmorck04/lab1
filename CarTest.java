@@ -37,7 +37,7 @@ public class CarTest {
     // testar gas och break med olika värden
     @Test
     public void testGasBreak() {
-        Car car = new Saab95();
+        Vehicle car = new Saab95();
         car.startEngine();
         car.gas(5);
         car.gas(1);
