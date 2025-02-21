@@ -1,10 +1,11 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
-
-
-
 
 /*
 * This class represents the Controller part in the MVC pattern.
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 
 public class CarController{
     // member fields:
-
+    private boolean secondCarAdjusted = false;
     // The delay (ms) corresponds to 20 updates a sec (hz)
     private final int delay = 50;
     // The timer is started with a listener (see below) that executes the statements
@@ -35,8 +36,8 @@ public class CarController{
         // Instance of this class
         CarController cc = new CarController();
 
-        cc.vehicles.add(new Saab95());
 
+        cc.vehicles.add(new Volvo240());
         cc.vehicles.add(new Scania());
 
         // Start a new view and send a reference of self
@@ -45,74 +46,96 @@ public class CarController{
         // Start the timer
         cc.timer.start();
     }
-
     /* Each step the TimerListener moves all the cars in the list and tells the
     * view to update its images. Change this method to your needs.
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Vehicle car : vehicles) {
+            Workshop<Volvo240> volvoWork = new Workshop<>(3);
+            for (int i = 0; i < vehicles.size(); i++) {
+                Vehicle car = vehicles.get(i);
                 car.move();
+
+                // Special handling for the second car (index 1)
+                if (i == 1 && !secondCarAdjusted) { // Check if it's the second car and not yet adjusted
+                    car.setY(car.getY() + 100); // Increase y-coordinate by 100 pixels
+                    secondCarAdjusted = true; // Mark as adjusted to prevent further changes
+                }
+
+                if (car instanceof Volvo240 && car.getX() > 250 && car.getX() < 300 && car.getY() > 250 && car.getY() > 300){
+                    volvoWork.acceptCar((Volvo240)car);
+
+
+                }
                 int x = (int) Math.round(car.getX());
                 int y = (int) Math.round(car.getY());
-                System.out.println(y);
-                frame.drawPanel.moveit(x, y);
+                frame.drawPanel.moveit(car, x, y);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
             }
         }
     }
 
-    // Calls the gas method for each car once
+
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-            for (Vehicle car : vehicles) {
-                car.gas(gas);
-            }
+        for (Vehicle car : vehicles
+        ) {
+            car.gas(gas);
+        }
     }
-    // Calls the gas method for each car once
     void brake(int amount) {
         double brake = ((double) amount) / 100;
         for (Vehicle car : vehicles) {
             car.brake(brake);
         }
-    }
-    void startEngines() {
-        for (Vehicle car : vehicles) {
+    }void startEngine(){
+        for (Vehicle car : vehicles){
             car.startEngine();
         }
-    }
-    void stopEngines() {
-        for (Vehicle car : vehicles) {
+    }void stopEngine(){
+        for (Vehicle car : vehicles){
             car.stopEngine();
         }
     }
-    void turnTurboOn() {
+    void stopCars(){
+        for (Vehicle car : vehicles){
+            car.setCurrentSpeed(0);
+        }
+    }void turnLeft(){
+        for (Vehicle car : vehicles){
+            car.turnLeft();
+        }
+    }void turnRight(){
+        for (Vehicle car : vehicles){
+            car.turnRight();
+        }
+    }void turboOn() {
         for (Vehicle car : vehicles) {
             if (car instanceof Saab95) {
-                ((Saab95) car).setTurboOn(); // Cast to Saab95 and turn turbo on
+                ((Saab95) car).setTurboOn();
             }
         }
-    }
-    void turnTurboOff() {
+    }void turboOff() {
         for (Vehicle car : vehicles) {
             if (car instanceof Saab95) {
-                ((Saab95) car).setTurboOff(); // Cast to Saab95 and turn turbo on
+                ((Saab95)car).setTurboOff();
+            }
+        }
+    }void increaseAngle(){
+        for (Vehicle car : vehicles){
+            if (car instanceof  Scania){
+                ((Scania)car).setFlakAngle(90);
+            }
+        }
+    }void decreaseAngle(){
+        for (Vehicle car : vehicles){
+            if (car instanceof Scania){
+                ((Scania)car).setFlakAngle(0);
             }
         }
     }
-    void liftBed() {
-        for (Vehicle car : vehicles) {
-            if (car instanceof Truck) {
-                ((Truck) car).setFlakAngle(90); // Cast to Saab95 and turn turbo on
-            }
-        }
-    }
-    void lowerBed() {
-        for (Vehicle car : vehicles) {
-            if (car instanceof Truck) {
-                ((Truck) car).setFlakAngle(0); // Cast to Saab95 and turn turbo on
-            }
-        }
+    void unload() {
+
     }
 }

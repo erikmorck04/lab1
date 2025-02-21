@@ -43,9 +43,11 @@ public abstract class Truck extends Vehicle {
     }
 
     public void setFlakAngle(int angle) {
-        if (angle >= 0 && angle <= maxAngle && getCurrentSpeed()<=0.001) { // Ensure the angle is within valid range
-            flakAngle = angle;
+        if (angle >= 0 && getCurrentSpeed()<=0.001) { // Ensure the angle is within valid range
+            flakAngle = Math.min(angle,maxAngle);
         } else {
+            System.out.println(getCurrentSpeed());
+            System.out.println(angle);
             System.out.println("Invalid flak angle or speed is not 0.");
         }
     }

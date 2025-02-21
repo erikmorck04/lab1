@@ -71,7 +71,7 @@ public abstract class Vehicle implements Movable{
     public String getPos() {
         return x + ", " + y;
     }
-
+    public boolean isLoaded(){ return loaded;}
     public double getX() {
         return x;
     }
@@ -80,6 +80,9 @@ public abstract class Vehicle implements Movable{
     }
     void setX(double new_x){
         x = new_x;
+    }
+    void setLoaded(boolean load){
+        loaded = load;
     }
     void setY(double new_y){
         y = new_y;
@@ -91,48 +94,51 @@ public abstract class Vehicle implements Movable{
     //Ändrar ens x och y värde med ens riktning och fart
     @Override
     public void move(){
+        if(!isLoaded()){
 
-        switch (direction) {
-            case North:
-                if (y > 500) { // If the car hits the top boundary
-                    direction = Direction.South; // Reverse direction to South
-                    setCurrentSpeed(0);
-                }
-                break;
-            case South:
-                if (y < 0) { // If the car hits the bottom boundary
-                    direction = Direction.North; // Reverse direction to North
-                    setCurrentSpeed(0);
-                }
-                break;
-            case East:
-                if (x > 700) { // If the car hits the right boundary
-                    direction = Direction.West; // Reverse direction to West
-                    setCurrentSpeed(0);
-                }
-                break;
-            case West:
-                if (x < 0) { // If the car hits the left boundary
-                    direction = Direction.East; // Reverse direction to East
-                    setCurrentSpeed(0);
-                }
-                break;
+
+            switch (direction) {
+                case North:
+                    if (y > 500) { // If the car hits the top boundary
+                        direction = Direction.South; // Reverse direction to South
+                        setCurrentSpeed(0);
+                    }
+                    break;
+                case South:
+                    if (y < 0) { // If the car hits the bottom boundary
+                        direction = Direction.North; // Reverse direction to North
+                        setCurrentSpeed(0);
+                    }
+                    break;
+                case East:
+                    if (x > 700) { // If the car hits the right boundary
+                        direction = Direction.West; // Reverse direction to West
+                        setCurrentSpeed(0);
+                    }
+                    break;
+                case West:
+                    if (x < 0) { // If the car hits the left boundary
+                        direction = Direction.East; // Reverse direction to East
+                        setCurrentSpeed(0);
+                    }
+                    break;
+            }
+            switch (direction) {
+                case North:
+                    y += currentSpeed;
+                    break;
+                case West:
+                    x = x - currentSpeed;
+                    break;
+                case East:
+                    x = x + currentSpeed;
+                    break;
+                case South:
+                    y -= currentSpeed;
+                    break;
+            }
         }
 
-        switch (direction) {
-            case North:
-                y += currentSpeed;
-                break;
-            case West:
-                x = x - currentSpeed;
-                break;
-            case East:
-                x = x + currentSpeed;
-                break;
-            case South:
-                y -= currentSpeed;
-                break;
-        }
     }
     //Ändrar riktning från en enum till en annan (tex north till west)
     @Override

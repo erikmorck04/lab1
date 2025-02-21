@@ -22,6 +22,7 @@ public class Workshop<T extends Vehicle> {
         }
         else {
             carList.add(car);
+            car.setLoaded(true);
         }
     }
     //Printar alla bilar som finns i workshoppen
@@ -35,6 +36,7 @@ public class Workshop<T extends Vehicle> {
         if(carList.contains(car)){
             carList.remove(car);
             System.out.println("Vehicle has left the workshop");
+            car.setLoaded(false);
         }else{
             System.out.println("Bil ej i verkstad");
         }
