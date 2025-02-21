@@ -1,12 +1,20 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
 // This panel represents the animated part of the view with the car images.
 
 public class DrawPanel extends JPanel{
+
+
+    //asså antar att med "todo generalize"
+    //menar dom att man ska kunna lägga till mera bilar elr nåt
+    ArrayList<BufferedImage> images = new ArrayList<>();
+    ArrayList<Point> points = new ArrayList<>();
+
 
     // Just a single image, TODO: Generalize
     BufferedImage volvoImage;
@@ -21,6 +29,14 @@ public class DrawPanel extends JPanel{
         volvoPoint.x = x;
         volvoPoint.y = y;
     }
+
+
+
+
+    public void addCar(Vehicle vehicle){
+
+    }
+
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {

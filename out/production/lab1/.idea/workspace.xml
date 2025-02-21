@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarTransport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Vehicle.class" afterDir="false" />
-    </list>
-    <list id="5b2a66d8-ab09-48a3-b814-11f38977f34f" name="Changes by Sixte" comment="">
-      <change beforePath="$PROJECT_DIR$/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
+    <list id="5b2a66d8-ab09-48a3-b814-11f38977f34f" name="Changes by Sixte" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,19 +20,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/CarTest.java">
-      <ranges>
-        <range start1="42" end1="42" start2="42" end2="43" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="43" end1="43" start2="44" end2="45" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="44" end1="44" start2="46" end2="47" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="45" end1="45" start2="48" end2="49" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="82" end1="82" start2="86" end2="87" changelist="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" />
-        <range start1="85" end1="85" start2="90" end2="91" changelist="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" />
-        <range start1="99" end1="99" start2="105" end2="106" changelist="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" />
-      </ranges>
-    </file>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />

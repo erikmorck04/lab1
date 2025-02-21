@@ -12,7 +12,7 @@ import java.util.ArrayList;
 * modifying the model state and the updating the view.
  */
 
-public class CarController {
+public class CarController{
     // member fields:
 
     // The delay (ms) corresponds to 20 updates a sec (hz)
@@ -26,14 +26,18 @@ public class CarController {
 
     // A list of cars, modify if needed
     ArrayList<Vehicle> vehicles = new ArrayList<>();
-
     //methods:
+    public ArrayList<Vehicle> getVehicles() {
+        return vehicles;
+    }
 
     public static void main(String[] args) {
         // Instance of this class
         CarController cc = new CarController();
 
-        cc.vehicles.add(new Volvo240());
+        cc.vehicles.add(new Saab95());
+
+        cc.vehicles.add(new Scania());
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -51,6 +55,7 @@ public class CarController {
                 car.move();
                 int x = (int) Math.round(car.getX());
                 int y = (int) Math.round(car.getY());
+                System.out.println(y);
                 frame.drawPanel.moveit(x, y);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
@@ -70,6 +75,44 @@ public class CarController {
         double brake = ((double) amount) / 100;
         for (Vehicle car : vehicles) {
             car.brake(brake);
+        }
+    }
+    void startEngines() {
+        for (Vehicle car : vehicles) {
+            car.startEngine();
+        }
+    }
+    void stopEngines() {
+        for (Vehicle car : vehicles) {
+            car.stopEngine();
+        }
+    }
+    void turnTurboOn() {
+        for (Vehicle car : vehicles) {
+            if (car instanceof Saab95) {
+                ((Saab95) car).setTurboOn(); // Cast to Saab95 and turn turbo on
+            }
+        }
+    }
+    void turnTurboOff() {
+        for (Vehicle car : vehicles) {
+            if (car instanceof Saab95) {
+                ((Saab95) car).setTurboOff(); // Cast to Saab95 and turn turbo on
+            }
+        }
+    }
+    void liftBed() {
+        for (Vehicle car : vehicles) {
+            if (car instanceof Truck) {
+                ((Truck) car).setFlakAngle(90); // Cast to Saab95 and turn turbo on
+            }
+        }
+    }
+    void lowerBed() {
+        for (Vehicle car : vehicles) {
+            if (car instanceof Truck) {
+                ((Truck) car).setFlakAngle(0); // Cast to Saab95 and turn turbo on
+            }
         }
     }
 }
