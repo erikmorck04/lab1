@@ -39,6 +39,13 @@ public class CarController{
 
         cc.vehicles.add(new Volvo240());
         cc.vehicles.add(new Scania());
+        cc.vehicles.add(new Saab95());
+
+        int index = 0;
+        for (Vehicle car : cc.vehicles){
+            car.setY(car.getY() + index);
+            index += 100;
+        }
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -57,10 +64,7 @@ public class CarController{
                 car.move();
 
                 // Special handling for the second car (index 1)
-                if (i == 1 && !secondCarAdjusted) { // Check if it's the second car and not yet adjusted
-                    car.setY(car.getY() + 100); // Increase y-coordinate by 100 pixels
-                    secondCarAdjusted = true; // Mark as adjusted to prevent further changes
-                }
+                
 
                 if (car instanceof Volvo240 && car.getX() > 250 && car.getX() < 300 && car.getY() > 250 && car.getY() > 300){
                     volvoWork.acceptCar((Volvo240)car);
