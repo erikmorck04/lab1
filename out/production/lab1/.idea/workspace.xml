@@ -4,133 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
-    <list id="f62cdf0b-c972-486c-8a59-1d7ed7e3b472" name="Changes by erikm" comment="">
+    <list default="true" id="8d20adf9-c749-444f-acd2-e0c1313b357b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DrawPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarController$TimerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarController.class" afterDir="false" />
     </list>
-    <list id="5b2a66d8-ab09-48a3-b814-11f38977f34f" name="Changes by Sixte" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2sWuhFf0rUQfaBNkTakpPBg19bv" />
+  <component name="ProjectId" id="2scS7RH2b0PyHMgTQBXezQtZIVx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CarController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JUnit.CarTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CarTest.testLoadable.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CarTest.testTransportPos.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CarTest.testUnloadOrder.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CarController.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.CarTest.executor": "Coverage",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/erikm/Documents/JavaGrejs/flappy-bird-java-master"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pics" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.CarController">
-    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CarController" />
-      <module name="lab1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarTest.testLoadable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarTest" />
-      <option name="METHOD_NAME" value="testLoadable" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarTest.testTransportPos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarTest" />
-      <option name="METHOD_NAME" value="testTransportPos" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarTest.testUnloadOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarTest" />
-      <option name="METHOD_NAME" value="testUnloadOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.CarController" />
-        <item itemvalue="JUnit.CarTest.testLoadable" />
-        <item itemvalue="JUnit.CarTest" />
-        <item itemvalue="JUnit.CarTest.testTransportPos" />
-        <item itemvalue="JUnit.CarTest.testUnloadOrder" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
-      <created>1738583768828</created>
+      <changelist id="8d20adf9-c749-444f-acd2-e0c1313b357b" name="Changes" comment="" />
+      <created>1738753203213</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1738583768828</updated>
+      <updated>1738753203213</updated>
     </task>
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab1$CarTest_testLoadable.ic" NAME="CarTest.testLoadable Coverage Results" MODIFIED="1740054786421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/lab1$CarTest.ic" NAME="CarTest Coverage Results" MODIFIED="1738939486964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1$Main.ic" NAME="Main Coverage Results" MODIFIED="1738770159045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1$CarTest.ic" NAME="CarTest Coverage Results" MODIFIED="1739197669306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
