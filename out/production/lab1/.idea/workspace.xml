@@ -1,56 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="8d20adf9-c749-444f-acd2-e0c1313b357b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarController$TimerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarController.class" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2scS7RH2b0PyHMgTQBXezQtZIVx" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CarController.executor": "Run",
-    "Application.Main.executor": "Run",
-    "JUnit.CarTest.executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/erikm/Documents/JavaGrejs/flappy-bird-java-master"
-  }
-}]]></component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="8d20adf9-c749-444f-acd2-e0c1313b357b" name="Changes" comment="" />
-      <created>1738753203213</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1738753203213</updated>
-    </task>
-    <servers />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab1$Main.ic" NAME="Main Coverage Results" MODIFIED="1738770159045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/lab1$CarTest.ic" NAME="CarTest Coverage Results" MODIFIED="1739197669306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="labb1 oop" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="labb1 oop" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
 </project>
