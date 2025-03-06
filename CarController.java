@@ -14,60 +14,37 @@ import java.util.ArrayList;
  */
 
 public class CarController{
-    // member fields:
-    private boolean secondCarAdjusted = false;
-    // The delay (ms) corresponds to 20 updates a sec (hz)
-    private final int delay = 50;
-    // The timer is started with a listener (see below) that executes the statements
-    // each step between delays.
-    private Timer timer = new Timer(delay, new TimerListener());
 
+    private final int delay = 50;
+    private final CarManager carManager = new CarManager();
+    private final Timer timer = new Timer(delay, new TimerListener());
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
 
-    // A list of cars, modify if needed
-    ArrayList<Vehicle> vehicles = new ArrayList<>();
-    //methods:
-    public ArrayList<Vehicle> getVehicles() {
-        return vehicles;
-    }
 
-    public static void main(String[] args) {
-        // Instance of this class
-        CarController cc = new CarController();
-
-        cc.vehicles.add(new Volvo240());
-        cc.vehicles.add(new Scania());
-        cc.vehicles.add(new Saab95());
-
-
+    public CarController(){
         int index = 0;
-        for (Vehicle car : cc.vehicles){
+        for (Vehicle car : carManager.getVehicles()){
             car.setY(car.getY() + index);
             index += 100;
         }
-
         // Start a new view and send a reference of self
-        cc.frame = new CarView("CarSim 1.0", cc);
+        frame = new CarView("CarSim 1.0", this);
 
         // Start the timer
-        cc.timer.start();
+        timer.start();
+
     }
+
     /* Each step the TimerListener moves all the cars in the list and tells the
     * view to update its images. Change this method to your needs.
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             Workshop<Volvo240> volvoWork = new Workshop<>(3);
-            for (int i = 0; i < vehicles.size(); i++) {
-                Vehicle car = vehicles.get(i);
+            for (int i = 0; i < carManager.getVehicles().size(); i++) {
+                Vehicle car = carManager.getVehicles().get(i);
                 car.move();
-
-                // Special handling for the second car (index 1)
-//                if (i == 1 && !secondCarAdjusted) { // Check if it's the second car and not yet adjusted
-//                    car.setY(car.getY() + 100); // Increase y-coordinate by 100 pixels
-//                    secondCarAdjusted = true; // Mark as adjusted to prevent further changes
-//                }
 
                 if (car instanceof Volvo240 && car.getX() > 250 && car.getX() < 300 && car.getY() > 250 && car.getY() > 300){
                     volvoWork.acceptCar((Volvo240)car);
@@ -82,67 +59,62 @@ public class CarController{
             }
         }
     }
-
-
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (Vehicle car : vehicles
+        for (Vehicle car : carManager.getVehicles()
         ) {
             car.gas(gas);
         }
     }
     void brake(int amount) {
         double brake = ((double) amount) / 100;
-        for (Vehicle car : vehicles) {
+        for (Vehicle car : carManager.getVehicles()) {
             car.brake(brake);
         }
     }void startEngine(){
-        for (Vehicle car : vehicles){
+        for (Vehicle car : carManager.getVehicles()){
             car.startEngine();
         }
     }void stopEngine(){
-        for (Vehicle car : vehicles){
+        for (Vehicle car : carManager.getVehicles()){
             car.stopEngine();
         }
     }
     void stopCars(){
-        for (Vehicle car : vehicles){
+        for (Vehicle car : carManager.getVehicles()){
             car.setCurrentSpeed(0);
         }
     }void turnLeft(){
-        for (Vehicle car : vehicles){
+        for (Vehicle car : carManager.getVehicles()){
             car.turnLeft();
         }
     }void turnRight(){
-        for (Vehicle car : vehicles){
+        for (Vehicle car : carManager.getVehicles()){
             car.turnRight();
         }
     }void turboOn() {
-        for (Vehicle car : vehicles) {
+        for (Vehicle car : carManager.getVehicles()) {
             if (car instanceof Saab95) {
                 ((Saab95) car).setTurboOn();
             }
         }
     }void turboOff() {
-        for (Vehicle car : vehicles) {
+        for (Vehicle car : carManager.getVehicles()) {
             if (car instanceof Saab95) {
                 ((Saab95)car).setTurboOff();
             }
         }
     }void increaseAngle(){
-        for (Vehicle car : vehicles){
+        for (Vehicle car : carManager.getVehicles()){
             if (car instanceof  Scania){
                 ((Scania)car).setFlakAngle(90);
             }
         }
     }void decreaseAngle(){
-        for (Vehicle car : vehicles){
+        for (Vehicle car : carManager.getVehicles()){
             if (car instanceof Scania){
                 ((Scania)car).setFlakAngle(0);
             }
         }
-    }
-    void unload() {
-
     }
 }

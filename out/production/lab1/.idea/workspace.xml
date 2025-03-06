@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
+    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/uml1.drawio" beforeDir="false" />
+    </list>
     <list id="f62cdf0b-c972-486c-8a59-1d7ed7e3b472" name="Changes by erikm" comment="" />
-    <list id="5b2a66d8-ab09-48a3-b814-11f38977f34f" name="Changes by Sixte" comment="" />
+    <list id="5b2a66d8-ab09-48a3-b814-11f38977f34f" name="Changes by Sixte" comment="">
+      <change beforePath="$PROJECT_DIR$/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,28 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CarController.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.CarTest.executor": "Run",
-    "JUnit.CarTest.testLoadable.executor": "Run",
-    "JUnit.CarTest.testTransportPos.executor": "Run",
-    "JUnit.CarTest.testUnloadOrder.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/filiplarsen/Documents/GitHub/lab1",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CarController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JUnit.CarTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testLoadable.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testTransportPos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testUnloadOrder.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/filiplarsen/Documents/GitHub/lab1/uml&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uml" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
