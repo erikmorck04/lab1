@@ -133,7 +133,7 @@ public class CarTest {
     //Testar workshops acceptCar och removeCar funktion
     @Test
     public void testWorkshop(){
-        Workshop<Saab95> workshopSaab = new Workshop<>(3);
+        Workshop<Saab95> workshopSaab = new Workshop<>(3,300,300,50,50);
         Saab95 saab = new Saab95();
         //Workshop borde inte starta med bilar
         assertEquals(0.0, workshopSaab.getCarList().size(),0.01);

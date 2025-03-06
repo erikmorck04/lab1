@@ -1,26 +1,8 @@
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.ArrayList;
-
-/*
-* This class represents the Controller part in the MVC pattern.
-* It's responsibilities is to listen to the View and responds in a appropriate manner by
-* modifying the model state and the updating the view.
- */
 
 public class CarController{
-
-    private final int delay = 50;
-    private final CarManager carManager = new CarManager();
-    private final Timer timer = new Timer(delay, new TimerListener());
+    public final CarManager carManager = new CarManager();
+    public TimerUpdate timerUpdate;
     // The frame that represents this instance View of the MVC pattern
-    CarView frame;
-
 
     public CarController(){
         int index = 0;
@@ -28,37 +10,13 @@ public class CarController{
             car.setY(car.getY() + index);
             index += 100;
         }
-        // Start a new view and send a reference of self
-        frame = new CarView("CarSim 1.0", this);
-
         // Start the timer
-        timer.start();
+        timerUpdate = new TimerUpdate(carManager,new CarViewUpdater( new CarView("CarSim 1.0", this)));
+
 
     }
 
-    /* Each step the TimerListener moves all the cars in the list and tells the
-    * view to update its images. Change this method to your needs.
-    * */
-    private class TimerListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            Workshop<Volvo240> volvoWork = new Workshop<>(3);
-            for (int i = 0; i < carManager.getVehicles().size(); i++) {
-                Vehicle car = carManager.getVehicles().get(i);
-                car.move();
 
-                if (car instanceof Volvo240 && car.getX() > 250 && car.getX() < 300 && car.getY() > 250 && car.getY() > 300){
-                    volvoWork.acceptCar((Volvo240)car);
-
-
-                }
-                int x = (int) Math.round(car.getX());
-                int y = (int) Math.round(car.getY());
-                frame.drawPanel.moveit(car, x, y);
-                // repaint() calls the paintComponent method of the panel
-                frame.drawPanel.repaint();
-            }
-        }
-    }
     void gas(int amount) {
         double gas = ((double) amount) / 100;
         for (Vehicle car : carManager.getVehicles()

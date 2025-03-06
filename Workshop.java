@@ -1,12 +1,20 @@
 import java.util.ArrayList;
+import java.awt.geom.Rectangle2D;
 
 public class Workshop<T extends Vehicle> {
     private final int maxCars;
+    private final Rectangle2D.Double hitbox;
     private final ArrayList<T> carList = new ArrayList<>();
 
    //Constructor för workshop
-    public Workshop(int maxCars) {
+    public Workshop(int maxCars,double x, double y,double width, double height) {
+        this.hitbox = new Rectangle2D.Double(x, y,width, height);
         this.maxCars = maxCars;
+    }
+
+
+    public boolean isInHitbox(Vehicle vehicle) {
+        return hitbox.contains(vehicle.getX(), vehicle.getY());
     }
 
     // Returnerar alla bilar i workshoppen

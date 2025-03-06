@@ -14,15 +14,13 @@ public class Main {
         saab1.startEngine();
         carTransport.startEngine();
 
-        Workshop<Volvo240> saabVerkstad = new Workshop<>(2);
+        Workshop<Volvo240> saabVerkstad = new Workshop<>(2,300,300,50,50);
         saabVerkstad.acceptCar(volvo);
         saabVerkstad.acceptCar(volvo);
         saabVerkstad.prints_cars();
 
         System.out.println(carTransport.getCarryList());
 
-
-        Workshop<Vehicle> verkstad = new Workshop<>(2);
         //System.out.println(verksta);
     }
 }
