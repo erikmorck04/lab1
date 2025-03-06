@@ -3,9 +3,9 @@ import java.util.ArrayList;
 public class CarManager{
     private int nextYPos = 0;
     ArrayList<Vehicle> vehicles = new ArrayList<>();
+    private final ArrayList<Workshop<?>> workshops = new ArrayList<>();
 
     //Inte en bil men ska vara här ändå
-    Workshop<Volvo240> volvoWork = new Workshop<>(3,300,300,50,50);
     public CarManager(){
 
     }
@@ -29,4 +29,13 @@ public class CarManager{
     public ArrayList<Vehicle> getVehicles() {
         return vehicles;
     }
+
+    public void addWorkshop(Workshop<?> workshop) {
+        workshops.add(workshop);
+    }
+
+    public ArrayList<Workshop<?>> getWorkshops() {
+        return workshops;
+    }
 }
+

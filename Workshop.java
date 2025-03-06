@@ -5,13 +5,15 @@ public class Workshop<T extends Vehicle> {
     private final int maxCars;
     private final Rectangle2D.Double hitbox;
     private final ArrayList<T> carList = new ArrayList<>();
+    private final Class<T> vehicleType;
 
    //Constructor för workshop
-    public Workshop(int maxCars,double x, double y,double width, double height) {
+    public Workshop(int maxCars,double x, double y,double width, double height, Class<T> vehicleType) {
         this.hitbox = new Rectangle2D.Double(x, y,width, height);
         this.maxCars = maxCars;
+        this.vehicleType = vehicleType;
+        System.out.println("Hitbox: (" + hitbox.getX() + ", " + hitbox.getY() + ") Width: " + hitbox.getWidth() + " Height: " + hitbox.getHeight());
     }
-
 
     public boolean isInHitbox(Vehicle vehicle) {
         return hitbox.contains(vehicle.getX(), vehicle.getY());
@@ -21,15 +23,19 @@ public class Workshop<T extends Vehicle> {
     public ArrayList<T> getCarList() {
         return carList;
     }
+
     // Kollar om workshoppen kan ta emot fordon
-    public void acceptCar(T car) {
+    public void acceptCar(Vehicle car) {
         if (carList.size() >= maxCars) {
             System.out.println("Workshop is full");
-        } else if (carList.contains(car)){
-            System.out.println("Bil redan i verkstad");
+        } else if (!car.isLoaded() && vehicleType.isInstance(car) ){
+            carList.add((T) car);
+            car.setLoaded(true);
+            System.out.println(car.getModelName() + " has entered the workshop.");
         }
-        else {
-            carList.add(car);
+        else if (carList.contains(car)){
+            System.out.println("Bil redan i verkstad");
+            carList.add((T) car);
             car.setLoaded(true);
         }
     }
@@ -51,6 +57,3 @@ public class Workshop<T extends Vehicle> {
     }
 
 }
-
-
-

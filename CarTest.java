@@ -59,7 +59,7 @@ public class CarTest {
         assertEquals(0,scania.getFlakAngle(),0.1);
 
     }
-    @Test // testar om Truck inte kan åka om flakvinkeln är större än 0
+    @Test // testar om DrawPanel.Truck inte kan åka om flakvinkeln är större än 0
     public void testMovingIfFlak() {
         Scania scania = new Scania();
         scania.flakTippas(5);
@@ -133,7 +133,7 @@ public class CarTest {
     //Testar workshops acceptCar och removeCar funktion
     @Test
     public void testWorkshop(){
-        Workshop<Saab95> workshopSaab = new Workshop<>(3,300,300,50,50);
+        Workshop<Saab95> workshopSaab = new Workshop<>(3, 500, 400, 50, 50, Saab95.class);
         Saab95 saab = new Saab95();
         //Workshop borde inte starta med bilar
         assertEquals(0.0, workshopSaab.getCarList().size(),0.01);

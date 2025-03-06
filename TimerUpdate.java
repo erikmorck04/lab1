@@ -18,9 +18,15 @@ public class TimerUpdate {
         public void actionPerformed(ActionEvent e) {
             carManager.updateVehicles();
             for (Vehicle vehicle : carManager.getVehicles()) {
-                if (vehicle instanceof Volvo240 && carManager.volvoWork.isInHitbox(vehicle)) {
-                    carManager.volvoWork.acceptCar((Volvo240) vehicle);
+                if (!vehicle.isLoaded()){
+                    for (Workshop<?> workshop : carManager.getWorkshops()) { // Iterate through all workshops
+                        if (workshop.isInHitbox(vehicle)) {
+                            workshop.acceptCar(vehicle); // Let the workshop handle the vehicle
+                            break; // Stop checking other workshops for this vehicle
+                        }
+                    }
                 }
+
             }
             carViewUpdater.update(carManager.getVehicles());
         }

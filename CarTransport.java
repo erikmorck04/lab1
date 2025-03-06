@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.util.Stack;
 
-public class CarTransport extends Truck {
+public class CarTransport extends DrawPanel.Truck {
     private Stack<Vehicle> carryList = new Stack<Vehicle>();
     private int max_cars;
     public CarTransport(double enginePower, Color color, String modelName, double length, int maxcars) {

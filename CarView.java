@@ -5,55 +5,22 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-/**
- * This class represents the full view of the MVC pattern of your car simulator.
- * It initializes with being center on the screen and attaching it's controller in it's state.
- * It communicates with the Controller by calling methods of it when an action fires of in
- * each of it's components.
- * TODO: Write more actionListeners and wire the rest of the buttons
- **/
 
 public class CarView extends JFrame{
 
         private static final int X = 800;
         private static final int Y = 800;
-
+        int gasAmount = 0;
         // The controller member
         CarController carC;
-
         DrawPanel drawPanel;
-        //= new DrawPanel( X, Y-240,carC.cars);
 
-        JPanel controlPanel = new JPanel();
-
-        JPanel gasPanel = new JPanel();
-        JSpinner gasSpinner = new JSpinner();
-        int gasAmount = 0;
-        JLabel gasLabel = new JLabel("Amount of gas");
-
-        JButton gasButton = new JButton("Gas");
-        JButton brakeButton = new JButton("Brake");
-        JButton turboOnButton = new JButton("Saab Turbo on");
-        JButton turboOffButton = new JButton("Saab Turbo off");
-        JButton liftBedButton = new JButton("Open flak");
-        JButton lowerBedButton = new JButton("Close flak");
-        JButton unloadWorkshopButton = new JButton("Unload");
-
-        JButton turnLeftButton = new JButton("turn left");
-        JButton turnRightButton = new JButton("turn right");
-
-        JButton startButton = new JButton("Start all cars");
-        JButton stopButton = new JButton("Stop all cars");
-
-        // Constructor
         public CarView(String frameName, CarController cc){
             this.carC = cc;
             this.drawPanel = new DrawPanel(X, Y - 240, carC.carManager.getVehicles());
             initComponents(frameName);
         }
 
-        // Sets everything in place and fits everything
-        // TODO: Take a good look and make sure you understand how these methods and components work
         private void initComponents(String title) {
 
             this.setTitle(title);
@@ -62,7 +29,21 @@ public class CarView extends JFrame{
 
             this.add(drawPanel);
 
-
+            JPanel controlPanel = new JPanel();
+            JPanel gasPanel = new JPanel();
+            JSpinner gasSpinner = new JSpinner();
+            JLabel gasLabel = new JLabel("Amount of gas");
+            JButton gasButton = new JButton("Gas");
+            JButton brakeButton = new JButton("Brake");
+            JButton turboOnButton = new JButton("Saab Turbo on");
+            JButton turboOffButton = new JButton("Saab Turbo off");
+            JButton liftBedButton = new JButton("Open flak");
+            JButton lowerBedButton = new JButton("Close flak");
+            JButton unloadWorkshopButton = new JButton("Unload");
+            JButton turnLeftButton = new JButton("turn left");
+            JButton turnRightButton = new JButton("turn right");
+            JButton startButton = new JButton("Start all cars");
+            JButton stopButton = new JButton("Stop all cars");
 
             SpinnerModel spinnerModel =
                     new SpinnerNumberModel(0, //initial value
