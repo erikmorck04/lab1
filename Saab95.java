@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Saab95 extends Carsim.Car {
+public class Saab95 extends Car {
     //Varia
     private boolean turboOn;
 
@@ -9,6 +9,9 @@ public class Saab95 extends Carsim.Car {
         super(2, 125, Color.red, "Saab95",4.8);
         this.turboOn = false;
 
+    }
+    public static Vehicle createSaab() {
+        return new Saab95();
     }
     //Sätter på turbo
     public void setTurboOn() {

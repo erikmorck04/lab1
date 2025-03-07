@@ -13,6 +13,10 @@ public class CarTransport extends Truck {
         return carryList;
     }
 
+    public static Vehicle createCartransport() {
+        return new CarTransport(100,Color.black,"CarTransport",10,3);
+    }
+
     public void rampOpen() {
         if (getCurrentSpeed() <= 0.001) { // Ensure the truck is not moving
             setFlakAngle(1);

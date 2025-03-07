@@ -9,16 +9,8 @@ public class Carsim {
 
         cc.carManager.addWorkshop(volvoWorkshop);
 
-
-        cc.carManager.addVehicle(new Volvo240());
-        cc.carManager.addVehicle(new Saab95());
-        cc.carManager.addVehicle(new Scania());
-    }
-
-    public abstract static class Car extends Vehicle {
-        public Car(int nrDoors, double enginePower, Color color, String modelName, double length){
-            super(nrDoors, enginePower, color, modelName, length);
-        }
-
+        cc.carManager.addVehicle(Volvo240.createVolvo());
+        cc.carManager.addVehicle(Saab95.createSaab());
+        cc.carManager.addVehicle(Scania.createScania());
     }
 }
