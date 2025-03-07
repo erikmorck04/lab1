@@ -34,13 +34,13 @@ public class CarManager{
         int i = rng.nextInt(3);
         switch (i){
             case 0:
-                addVehicle(Volvo240.createVolvo());
+                addVehicle(CarCreator.createVehicle("Volvo240"));
                 break;
             case 1:
-                addVehicle(Saab95.createSaab());
+                addVehicle(CarCreator.createVehicle("Saab95"));
                 break;
             case 2:
-                addVehicle(Scania.createScania());
+                addVehicle(CarCreator.createVehicle("Scania"));
                 break;
         }
 

@@ -13,3 +13,6 @@ public class Carsim {
         //cc.carManager.addVehicle(Scania.createScania());
     }
 }
+
+// factory patter class
+// UML i repo

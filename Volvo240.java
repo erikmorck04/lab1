@@ -14,7 +14,5 @@
             return getEnginePower() * 0.01 * trimFactor;
         }
 
-        public static Vehicle createVolvo() {
-            return new Volvo240();
-        }
+
     }

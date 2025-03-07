@@ -10,9 +10,6 @@ public class Saab95 extends Car {
         this.turboOn = false;
 
     }
-    public static Vehicle createSaab() {
-        return new Saab95();
-    }
     //Sätter på turbo
     public void setTurboOn() {
         turboOn = true;

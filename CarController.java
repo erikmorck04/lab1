@@ -12,8 +12,6 @@ public class CarController{
         }
         // Start the timer
         timerUpdate = new TimerUpdate(carManager,new DrawPanelUpdater(new DrawPanel(800, 560, carManager.getVehicles())));
-
-
     }
 
 

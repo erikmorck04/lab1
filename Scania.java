@@ -6,7 +6,4 @@ public class Scania extends Truck {
         super(2,120,Color.white,"Scania",70,4.8);
     }
 
-    public static Vehicle createScania() {
-        return new Scania();
-    }
 }
