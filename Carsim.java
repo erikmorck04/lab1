@@ -9,10 +9,10 @@ public class Carsim {
 
         cc.carManager.addWorkshop(volvoWorkshop);
 
+
         cc.carManager.addVehicle(new Volvo240());
         cc.carManager.addVehicle(new Saab95());
         cc.carManager.addVehicle(new Scania());
-
     }
 
     public abstract static class Car extends Vehicle {

@@ -1,16 +1,20 @@
-import java.awt.*;
+    import java.awt.*;
 
-public class Volvo240 extends Vehicle {
+    public class Volvo240 extends Vehicle {
 
-    private final static double trimFactor = 1.25;
+        private final static double trimFactor = 1.25;
 
-    //Konstruktor
-    public Volvo240(){
-        super(4,100,Color.black,"Volvo240",4.8);
+        //Konstruktor
+        public Volvo240(){
+            super(4,100,Color.black,"Volvo240",4.8);
+        }
+        //Volvo240s speedfactor funkton
+        @Override
+        public double speedFactor(){
+            return getEnginePower() * 0.01 * trimFactor;
+        }
+
+        public Volvo240 createVolvo(){
+            return new Volvo240();
+        }
     }
-    //Volvo240s speedfactor funkton
-    @Override
-    public double speedFactor(){
-        return getEnginePower() * 0.01 * trimFactor;
-    }
-}
