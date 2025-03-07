@@ -18,7 +18,7 @@ public class CarView extends JFrame{
 
         public CarView(String frameName){
             this.carC = new CarController(this.drawPanel);
-            this.drawPanel = carC.timerUpdate.carViewUpdater.drawPanel;
+            this.drawPanel = carC.timerUpdate.drawPanelUpdater.drawPanel;
             //this.drawPanel = new DrawPanel(X, Y - 240, carC.carManager.getVehicles());
             initComponents(frameName);
         }
