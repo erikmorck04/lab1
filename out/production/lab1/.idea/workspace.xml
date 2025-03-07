@@ -4,34 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CarController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carsim.java" beforeDir="false" afterPath="$PROJECT_DIR$/Carsim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarController$TimerListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarViewUpdater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarViewUpdater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/Carsim.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Carsim.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/DrawPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/Workshop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Workshop.class" afterDir="false" />
-    </list>
+    <list default="true" id="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" name="Changes" comment="" />
     <list id="551c0c39-de84-4299-9c91-c9db79cba8cf" name="Changes by erikm" comment="">
-      <change beforePath="$PROJECT_DIR$/CarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarViewUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarViewUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carsim.java" beforeDir="false" afterPath="$PROJECT_DIR$/Carsim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Workshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop.java" afterDir="false" />
-    </list>
-    <list id="5b2a66d8-ab09-48a3-b814-11f38977f34f" name="Changes by Sixte" comment="">
-      <change beforePath="$PROJECT_DIR$/CarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
     </list>
+    <list id="5b2a66d8-ab09-48a3-b814-11f38977f34f" name="Changes by Sixte" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,34 +24,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Carsim.java">
-      <ranges>
-        <range start1="6" end1="8" start2="6" end2="6" changelist="551c0c39-de84-4299-9c91-c9db79cba8cf" />
-        <range start1="11" end1="11" start2="9" end2="14" changelist="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/CarManager.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="4" changelist="551c0c39-de84-4299-9c91-c9db79cba8cf" />
-        <range start1="6" end1="6" start2="6" end2="8" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="11" end1="11" start2="13" end2="14" changelist="551c0c39-de84-4299-9c91-c9db79cba8cf" />
-        <range start1="12" end1="12" start2="15" end2="16" changelist="551c0c39-de84-4299-9c91-c9db79cba8cf" />
-        <range start1="23" end1="23" start2="27" end2="28" changelist="551c0c39-de84-4299-9c91-c9db79cba8cf" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/DrawPanel.java">
-      <ranges>
-        <range start1="13" end1="14" start2="13" end2="15" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="15" end1="25" start2="16" end2="17" changelist="0dd16b4c-e38e-47b9-b344-ba3eafd0d18b" />
-        <range start1="32" end1="52" start2="24" end2="24" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="53" end1="56" start2="25" end2="25" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="61" end1="62" start2="30" end2="31" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="65" end1="66" start2="34" end2="34" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-        <range start1="68" end1="72" start2="36" end2="37" changelist="5b2a66d8-ab09-48a3-b814-11f38977f34f" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -87,30 +36,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CarController.executor": "Run",
-    "Application.Carsim.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.CarTest.executor": "Run",
-    "JUnit.CarTest.testLoadable.executor": "Run",
-    "JUnit.CarTest.testTransportPos.executor": "Run",
-    "JUnit.CarTest.testUnloadOrder.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/filiplarsen/Documents/GitHub/lab1/uml",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CarController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Carsim.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JUnit.CarTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testLoadable.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testTransportPos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CarTest.testUnloadOrder.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/filiplarsen/Documents/GitHub/lab1/uml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/uml" />

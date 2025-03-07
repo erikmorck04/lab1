@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.random.RandomGenerator;
 
 public class CarView extends JFrame{
 
@@ -15,9 +16,10 @@ public class CarView extends JFrame{
         CarController carC;
         DrawPanel drawPanel;
 
-        public CarView(String frameName, CarController cc){
-            this.carC = cc;
-            this.drawPanel = new DrawPanel(X, Y - 240, carC.carManager.getVehicles());
+        public CarView(String frameName){
+            this.carC = new CarController(this.drawPanel);
+            this.drawPanel = carC.timerUpdate.carViewUpdater.drawPanel;
+            //this.drawPanel = new DrawPanel(X, Y - 240, carC.carManager.getVehicles());
             initComponents(frameName);
         }
 
@@ -44,6 +46,8 @@ public class CarView extends JFrame{
             JButton turnRightButton = new JButton("turn right");
             JButton startButton = new JButton("Start all cars");
             JButton stopButton = new JButton("Stop all cars");
+            JButton addCarButton = new JButton("Add car");
+            JButton removeCarButton = new JButton("Remove button");
 
             SpinnerModel spinnerModel =
                     new SpinnerNumberModel(0, //initial value
@@ -63,7 +67,7 @@ public class CarView extends JFrame{
 
             this.add(gasPanel);
 
-            controlPanel.setLayout(new GridLayout(2,5));
+            controlPanel.setLayout(new GridLayout(2,6));
 
             controlPanel.add(gasButton, 0);
             controlPanel.add(brakeButton, 1);
@@ -73,6 +77,8 @@ public class CarView extends JFrame{
             controlPanel.add(turboOffButton, 5);
             controlPanel.add(liftBedButton, 6);
             controlPanel.add(lowerBedButton, 7);
+            controlPanel.add(addCarButton,8);
+            controlPanel.add(removeCarButton,9);
 
 
             controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
@@ -151,6 +157,20 @@ public class CarView extends JFrame{
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     carC.decreaseAngle();
+                }
+            });
+            addCarButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    carC.carManager.addRandomVehicle();
+                    //carC.carManager.addVehicle();
+                }
+            });
+            removeCarButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    carC.carManager.removeRandomVehicle();
+                    //carC.carManager.removeVehicle();
                 }
             });
 

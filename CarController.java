@@ -4,14 +4,14 @@ public class CarController{
     public TimerUpdate timerUpdate;
     // The frame that represents this instance View of the MVC pattern
 
-    public CarController(){
+    public CarController(DrawPanel panel){
         int index = 0;
         for (Vehicle car : carManager.getVehicles()){
             car.setY(car.getY() + index);
             index += 100;
         }
         // Start the timer
-        timerUpdate = new TimerUpdate(carManager,new CarViewUpdater( new CarView("CarSim 1.0", this)));
+        timerUpdate = new TimerUpdate(carManager,new DrawPanelUpdater(new DrawPanel(800, 560, carManager.getVehicles())));
 
 
     }

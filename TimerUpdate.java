@@ -6,10 +6,10 @@ import java.awt.event.ActionListener;
 public class TimerUpdate {
 
     private final CarManager carManager;
-    private final CarViewUpdater carViewUpdater;
-    public TimerUpdate(CarManager carManager, CarViewUpdater carViewUpdater) {
+    public final DrawPanelUpdater drawPanelUpdater;
+    public TimerUpdate(CarManager carManager, DrawPanelUpdater carViewUpdater) {
         this.carManager = carManager;
-        this.carViewUpdater = carViewUpdater;
+        this.drawPanelUpdater = carViewUpdater;
         Timer timer = new Timer(50, new TimerListener());
         timer.start();
     }
@@ -28,7 +28,7 @@ public class TimerUpdate {
                 }
 
             }
-            carViewUpdater.update(carManager.getVehicles());
+            drawPanelUpdater.update(carManager.getVehicles());
         }
     }
 }

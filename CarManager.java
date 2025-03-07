@@ -1,7 +1,7 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class CarManager{
-    private int nextYPos = 0;
     ArrayList<Vehicle> vehicles = new ArrayList<>();
     private final ArrayList<Workshop<?>> workshops = new ArrayList<>();
 
@@ -11,9 +11,11 @@ public class CarManager{
     }
 
     public void addVehicle(Vehicle vehicle) {
-        vehicle.setY(nextYPos);
-        vehicles.add(vehicle);
-        nextYPos += 100;
+        if(vehicles.size()<10){
+            vehicle.setY(0);
+            vehicle.setX(0);
+            vehicles.add(vehicle);
+        }
     }
 
     public void removeVehicle(Vehicle vehicle) {
@@ -23,6 +25,30 @@ public class CarManager{
     public void updateVehicles() {
         for (Vehicle vehicle : vehicles) {
             vehicle.move();
+        }
+    }
+
+
+    public void addRandomVehicle(){
+        Random rng = new Random();
+        int i = rng.nextInt(3);
+        switch (i){
+            case 0:
+                addVehicle(Volvo240.createVolvo());
+                break;
+            case 1:
+                addVehicle(Saab95.createSaab());
+                break;
+            case 2:
+                addVehicle(Scania.createScania());
+                break;
+        }
+
+    }
+    public void removeRandomVehicle(){
+        if(!vehicles.isEmpty()){
+            Random rng = new Random();
+            vehicles.remove(rng.nextInt(vehicles.size()));
         }
     }
 
